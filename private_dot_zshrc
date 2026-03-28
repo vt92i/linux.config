@@ -130,6 +130,9 @@ zstyle ':fzf-tab:*' switch-group '<' '>'
 # Environment settings
 # ------------------
 
+# Set Neovim as the default editor.
+export EDITOR="nvim"
+
 # Extend the PATH to include local binaries.
 export PATH=$PATH:$HOME/.local/bin
 
@@ -138,9 +141,6 @@ export PATH=$PATH:$HOME/go/bin
 
 # Add cargo binaries to the PATH.
 export PATH=$PATH:$HOME/.cargo/bin
-
-# Set Neovim as the default editor.
-export EDITOR="nvim"
 
 # -----------------
 # Load Aliases
@@ -181,19 +181,31 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 # Additional Tools
 # -----------------
 
+export SYSTEMD_PAGER=""
+
 # Initialize Zoxide for smart directory jumping.
 eval "$(zoxide init zsh)"
 
-# Source Atuin environment setup script.
-. "$HOME/.atuin/bin/env"
-
-# Initialize Atuin for Zsh.
-eval "$(atuin init zsh)"
+# direnv
+eval "$(direnv hook zsh)"
 
 # Initialize bun.
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+# pnpm start
+export PNPM_HOME="/home/flofi/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# autoload -U +X bashcompinit && bashcompinit
+
+# Load Angular CLI autocompletion.
+# source <(ng completion script)
+
 # Initialize Oh My Posh for terminal prompt customization.
-eval "$(oh-my-posh init zsh --config $HOME/.config/ompz/tk.toml)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/ompz/tk.json)"
