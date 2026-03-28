@@ -21,3 +21,12 @@ alias nv="nvim"
 
 # Alias for Zellij terminal workspace manager.
 alias zj="zellij"
+
+# sudo
+alias sudo="sudo "
+
+# lazygit
+alias lg="lazygit"
+
+# terraform
+alias tf="terraform"
