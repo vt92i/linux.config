@@ -57,8 +57,8 @@ style = "Regular"
 # args = ["-l"]
 
 [window]
-decorations = "none"
+decorations = "None"
 opacity = 0.98
-padding.x = 10
-padding.y = 10
+padding.x = 5
+padding.y = 5
 startup_mode = "Maximized"
