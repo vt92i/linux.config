@@ -202,10 +202,5 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-# autoload -U +X bashcompinit && bashcompinit
-
-# Load Angular CLI autocompletion.
-# source <(ng completion script)
-
 # Initialize Oh My Posh for terminal prompt customization.
 eval "$(oh-my-posh init zsh --config $HOME/.config/ompz/tk.json)"
