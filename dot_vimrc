@@ -1,0 +1,82 @@
+"" .vimrc
+
+" general
+set nocompatible
+set encoding=utf-8
+set number
+set relativenumber
+set numberwidth=4
+set noshowmode
+set laststatus=2
+set mouse=
+if has('termguicolors') | set termguicolors | endif
+set shortmess+=sI
+set fillchars=eob:\
+set whichwrap+=<,>,[,]
+set signcolumn=yes
+
+" indentation
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+set smartindent
+
+" search
+set ignorecase
+set smartcase
+set incsearch
+
+" safety
+set nomodeline
+
+" undo / backup / swap
+if has('persistent_undo')
+  set undofile
+  if !isdirectory($HOME.'/.vim/undo')
+    silent! call mkdir($HOME.'/.vim/undo', 'p', 0700)
+  endif
+  set undodir=~/.vim/undo
+endif
+set backup
+if !isdirectory($HOME.'/.vim/backup')
+  silent! call mkdir($HOME.'/.vim/backup', 'p', 0700)
+endif
+set backupdir=~/.vim/backup//
+set backupcopy=yes
+if !isdirectory($HOME.'/.vim/swap')
+  silent! call mkdir($HOME.'/.vim/swap', 'p', 0700)
+endif
+set directory=~/.vim/swap//
+
+" splits
+set splitbelow
+set splitright
+set hidden
+set confirm
+
+" performance
+set timeoutlen=400
+set updatetime=250
+set synmaxcol=200
+set lazyredraw
+set ttyfast
+
+" ui
+set wildmenu
+set wildmode=longest:full,full
+set scrolloff=3
+set sidescrolloff=5
+
+" auto-reload changed files
+set autoread
+autocmd FocusGained,CursorHold * checktime
+
+" syntax
+syntax on
+filetype plugin indent on
+
+" colors
+silent! colorscheme slate
+hi Normal  guibg=NONE ctermbg=NONE
+hi NonText guibg=NONE ctermbg=NONE
