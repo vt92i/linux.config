@@ -34,7 +34,7 @@ foreground = "0xc0caf5"
 TERM = "xterm-256color"
 
 [font]
-size = 11.5
+size = 16
 
 [font.bold]
 family = "JetBrainsMono Nerd Font Mono"
@@ -59,6 +59,6 @@ style = "Regular"
 [window]
 decorations = "None"
 opacity = 1.00
-padding.x = 5
-padding.y = 5
+padding.x = 0
+padding.y = 0
 startup_mode = "Maximized"
