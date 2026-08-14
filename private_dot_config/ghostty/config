@@ -2,6 +2,7 @@ cursor-style = block
 cursor-style-blink = false
 desktop-notifications = false
 font-family = "JetBrainsMono Nerd Font"
+font-size = 16
 maximize = true
 shell-integration-features = no-cursor
 theme = TokyoNight
