@@ -1,8 +1,8 @@
 # User information
 [user]
-  name = flofi
-  email = benidiktusvio@gmail.com
-  signingKey = 397E5F1FD5C84AA379289A5EA61AB352C54F3116
+  name = Fila Morello
+  email = fila.morello@proton.me
+  signingKey = B6D50A70A0AC09F2!
 
 # Always sign commits with GPG
 [commit]
