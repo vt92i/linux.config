@@ -186,9 +186,6 @@ export SYSTEMD_PAGER=""
 # Initialize Zoxide for smart directory jumping.
 eval "$(zoxide init zsh)"
 
-# direnv
-eval "$(direnv hook zsh)"
-
 # mise
 eval "$(mise activate zsh)"
 
